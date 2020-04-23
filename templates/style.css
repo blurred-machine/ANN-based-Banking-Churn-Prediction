@@ -1,0 +1,18 @@
+.bod{
+  background-color: #6A359C;
+  text-align: center;
+  padding-left: 40rem;
+  padding-right: 40rem;
+
+}
+.cl{
+
+  text-align: center;
+  padding: 10rem 15rem 15rem;
+
+}
+.form-control{
+  padding-left: 20rem;
+  padding-right: 20rem;
+  margin-top: 5%;
+}
