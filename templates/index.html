@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang=”en”>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -28,8 +31,6 @@
         <input type="text" name="IsActiveMember" class="form-control" placeholder="IsActiveMember">
         <input type="text" name="EstimatedSalary" class="form-control" placeholder="EstimatedSalary">
     </div>
-
-
         <button class="button" type="submit" name="submitBtn"><span>Submit </span></button>
 
 
