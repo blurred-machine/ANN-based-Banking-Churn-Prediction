@@ -73,7 +73,7 @@ def predict():
     
     print(x)
     
-    return jsonify({'prediction': x})
+    return jsonify({'prediction': str(x)})
 
 
 if __name__ == '__main__':

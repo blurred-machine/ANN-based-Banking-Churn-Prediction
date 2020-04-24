@@ -86,19 +86,19 @@ classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 're
 classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
 classifier.add(Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
 classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
-classifier.fit(X_train, y_train, batch_size = 10, epochs = 25)
+classifier.fit(X_train, y_train, batch_size = 10, epochs = 30)
 
 
 
 y_pred = classifier.predict(X_test)
-print(y_pred)
+print("\nPredicted values: "+str(y_pred)+"\n")
 y_pred = (y_pred > 0.5)
 
 # Making the Confusion Matrix
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 accuracy = (cm[0,0]+cm[1, 1])/(cm[0,0]+cm[1, 1]+cm[1,0]+cm[0, 1])
-print(accuracy)
+print("\nTest Accuracy: "+str(accuracy)+"\n")
 joblib.dump(classifier, 'prediction_classifier.pkl') 
 
 
