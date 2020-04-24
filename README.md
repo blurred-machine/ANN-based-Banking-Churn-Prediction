@@ -7,6 +7,7 @@
 ### Welcome Screen
 - The main welcome screen is made in HTML5 and CSS3 with a basic and simple design.
 - Here is the main screen for the Bank Churn Prediction Interface for the bank admin.</br>
+
 ![Welcome Screen](https://github.com/paras009/ANN-based-Banking-Churn-Prediction/blob/master/images/3welcome_screen.PNG)
 
 ### Bank Admin Input
