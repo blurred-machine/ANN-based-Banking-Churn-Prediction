@@ -3,4 +3,4 @@
 - The project was deployed on Google Cloud Platform as well as completely tested on Localhost.
 
 ## Project Description
-- ![Welcome Screen](images/3welcome_screen.png)
+- ![Welcome Screen](https://github.com/paras009/ANN-based-Banking-Churn-Prediction/blob/master/images/3welcome_screen.PNG)
