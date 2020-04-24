@@ -12,22 +12,25 @@
 </head>
 <body><div class="bod">
     <div class="cl">
-      <h1>Banking Churn Prediction</h1>
+      <h1 style="color: #FFF">Banking Churn Prediction</h1>
   <form action="/predict" method="POST">
 
-        <input type="text" name="CreditScore" class="form-control" placeholder="CreditScore" aria-label="Username" aria-describedby="basic-addon1">
-        <input type="text" name="Geography" class="form-control" placeholder="Geography" aria-label="Username" aria-describedby="basic-addon1">
-        <input type="text" name="Gender" class="form-control" placeholder="Gender" aria-label="Username" aria-describedby="basic-addon1">
-        <input type="text" name="Age" class="form-control" placeholder="Age" aria-label="Username" aria-describedby="basic-addon1">
-        <input type="text" name="Tenure" class="form-control" placeholder="Tenure" aria-label="Username" aria-describedby="basic-addon1">
+    <div id="entries">
+        <input type="text" name="CreditScore" class="form-control" placeholder="CreditScore">
+        <input type="text" name="Geography" class="form-control" placeholder="Geography">
+        <input type="text" name="Gender" class="form-control" placeholder="Gender">
+        <input type="text" name="Age" class="form-control" placeholder="Age">
+        <input type="text" name="Tenure" class="form-control" placeholder="Tenure">
 
-        <input type="text" name="Balance" class="form-control" placeholder="Balance" aria-label="Username" aria-describedby="basic-addon1">
-        <input type="text" name="NumOfProducts" class="form-control" placeholder="NumOfProducts" aria-label="Username" aria-describedby="basic-addon1">
-        <input type="text" name="HasCrCard" class="form-control" placeholder="HasCrCard" aria-label="Username" aria-describedby="basic-addon1">
-        <input type="text" name="IsActiveMember" class="form-control" placeholder="IsActiveMember" aria-label="Username" aria-describedby="basic-addon1">
-        <input type="text" name="EstimatedSalary" class="form-control" placeholder="EstimatedSalary" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" name="Balance" class="form-control" placeholder="Balance">
+        <input type="text" name="NumOfProducts" class="form-control" placeholder="NumOfProducts">
+        <input type="text" name="HasCrCard" class="form-control" placeholder="HasCrCard">
+        <input type="text" name="IsActiveMember" class="form-control" placeholder="IsActiveMember">
+        <input type="text" name="EstimatedSalary" class="form-control" placeholder="EstimatedSalary">
+    </div>
 
-        <input type="submit" name="submitBtn">
+
+        <button class="button" type="submit" name="submitBtn"><span>Submit </span></button>
 
 
 
