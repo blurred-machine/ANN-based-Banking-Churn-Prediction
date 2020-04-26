@@ -81,9 +81,21 @@ def build_model():
 
 
 # Implementing K-fold Cross validation
+from keras.wrappers.scikit_learn import KerasClassifier
+from sklearn.model_selection import cross_val_score
 
+classifier = KerasClassifier(build_fn = build_model, batch_size = 10, epochs = 30)
+accuracy_list = cross_val_score(estimator = classifier, X = X_train, y = y_train, cv = 10)
 
+mean_acc = accuracy_list.mean()
+std_acc = accuracy_list.std()
 
+print(mean_acc, std_acc)
+
+classifier.fit(X_train, y_train, batch_size = 10, epochs = 30)
+joblib.dump(classifier, 'prediction_classifier.pkl') 
+
+print(KerasClassifier.check_params)
 y_pred = classifier.predict(X_test)
 print("\nPredicted values: "+str(y_pred)+"\n")
 y_pred = (y_pred > 0.5)
@@ -93,7 +105,6 @@ from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 accuracy = (cm[0,0]+cm[1, 1])/(cm[0,0]+cm[1, 1]+cm[1,0]+cm[0, 1])
 print("\nTest Accuracy: "+str(accuracy)+"\n")
-joblib.dump(classifier, 'prediction_classifier.pkl') 
 
 
 
