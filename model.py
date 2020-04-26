@@ -15,6 +15,16 @@ from sklearn.externals import joblib
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 
+import keras
+from keras.models import Sequential
+from keras.layers import Dense, Dropout
+
+from keras.wrappers.scikit_learn import KerasClassifier
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import GridSearchCV
+
+
+
     
 df = pd.read_csv("Churn_Modelling.csv")
 
@@ -75,9 +85,6 @@ def generate_report():
 
 
 # Build basic ANN model 
-import keras
-from keras.models import Sequential
-from keras.layers import Dense, Dropout
 def build_model():
     classifier = Sequential()
     classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = X_train.shape[1]))
@@ -95,8 +102,7 @@ generate_report()
 
 
 # Implementing K-fold Cross validation
-from keras.wrappers.scikit_learn import KerasClassifier
-from sklearn.model_selection import cross_val_score
+
 def build_model():
     classifier = Sequential()
     classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = X_train.shape[1]))
@@ -119,8 +125,6 @@ generate_report()
 
 
 # implement Hyperparameter tuning for getting better accuracy using Grid Search
-from keras.wrappers.scikit_learn import KerasClassifier
-from sklearn.model_selection import GridSearchCV
 def build_model(optimizer):
     classifier = Sequential()
     classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = X_train.shape[1]))
@@ -146,8 +150,7 @@ generate_report()
 
 
 
-#generate report
-classifier.fit(X_train, y_train, batch_size = 10, nb_epoch = 30)
+# save the model so created above into a picle.
 joblib.dump(classifier, 'prediction_classifier.pkl') 
 
 
