@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
 # -*- coding: utf-8 -*-
 """
 Created on Wed Apr 22 05:42:28 2020
@@ -41,16 +40,10 @@ def clean_data(df):
 df_x = clean_data(df_x)
 # df_x.head()
 
-
-
 # df_one = pd.DataFrame(df_x.iloc[2, :])
 # df_one = df_one.T
 # df_one
 # clean_data(df_one)
-
-
-
-
 
 # columnTransformer = ColumnTransformer([('encoder', OneHotEncoder(), [1])], remainder='passthrough')
 # col_tnf = columnTransformer.fit_transform(df_x)
@@ -58,14 +51,10 @@ df_x = clean_data(df_x)
 # df_x = df_x[:, 1:]
 
 
-
 from sklearn.model_selection import train_test_split
-
 X_train, X_test, y_train, y_test = train_test_split(df_x, df_y, test_size = 0.2, random_state = 0)
 
 joblib.dump(X_train.columns, "columns.pkl")
-
-
 
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
@@ -81,12 +70,17 @@ import keras
 from keras.models import Sequential
 from keras.layers import Dense
 
-classifier = Sequential()
-classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = X_train.shape[1]))
-classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
-classifier.add(Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
-classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
-classifier.fit(X_train, y_train, batch_size = 10, epochs = 30)
+def build_model():
+    classifier = Sequential()
+    classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu', input_dim = X_train.shape[1]))
+    classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
+    classifier.add(Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
+    classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+    return classifier
+# classifier.fit(X_train, y_train, batch_size = 10, epochs = 30)
+
+
+# Implementing K-fold Cross validation
 
 
 
