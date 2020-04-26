@@ -94,6 +94,11 @@ std_acc = accuracy_list.std()
 
 print(mean_acc, std_acc)
 
+
+# implement Hyperparameter tuning for getting better accuracy
+
+
+
 classifier.fit(X_train, y_train, batch_size = 10, epochs = 30)
 joblib.dump(classifier, 'prediction_classifier.pkl') 
 
