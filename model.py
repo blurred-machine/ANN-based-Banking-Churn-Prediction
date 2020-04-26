@@ -115,6 +115,8 @@ accuracy_list = cross_val_score(estimator = classifier, X = X_train, y = y_train
 mean_acc = accuracy_list.mean()
 std_acc = accuracy_list.std()
 print(mean_acc, std_acc)
+
+classifier.fit(X_train, y_train)
 generate_report()
 
 

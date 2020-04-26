@@ -19,6 +19,8 @@
 ## Analysis and Accuracy
 - The Prediction engine is built over a deep **Artificial Neural Network** backed with **[Keras](https://www.tensorflow.org/guide/keras)**.
 - I have achieved an accuracy of around **~85%** on both training and testing data.</br>
+- The ANN is trained over K-fold cross validation testing over 10 rounds to find if it was underfit or overfit over the data based on the variance betweent the accuracies of the 10 rotations.
+- The model is Tuned over the Hyerparametes to find the best **batch_size**, **epoch** and **optimizer** for generating the best possible combination for best fit model.
 
 ![Accuracy Python Console](https://github.com/paras009/ANN-based-Banking-Churn-Prediction/blob/master/images/1accuracy_console.PNG)
 
