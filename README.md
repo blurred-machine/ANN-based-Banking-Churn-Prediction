@@ -31,7 +31,7 @@
 
 ## Predictions
 - The final prediction of the model is the percentage of churn for that customer.
--  The prediction signifies the chances of the customer to leave the services of the bank which makes the bank to _focus more on such such customers_ and try to retain them using **Sales and Marketing strategies** about which I have worked in this [GitHub](https://github.com/paras009/Sales-and-Marketing-Analytics) module.</br>
+-  The prediction signifies the chances of the customer to leave the services of the bank which makes the bank to _focus more on such such customers_ and try to retain them using **[Sales and Marketing strategies](https://github.com/paras009/Sales-and-Marketing-Analytics)** about which I have worked in this [GitHub](https://github.com/paras009/Sales-and-Marketing-Analytics) module.</br>
 
 ![Prediction Screenshot](https://github.com/paras009/ANN-based-Banking-Churn-Prediction/blob/master/images/5prediction.PNG)
 
