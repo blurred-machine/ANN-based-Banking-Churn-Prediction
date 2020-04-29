@@ -21,7 +21,6 @@ import flask
 app = Flask(__name__)
 
 main_cols = joblib.load("columns.pkl")
-main_cols = joblib.load("columns.pkl")
     
 
 def clean_data(df_x):
@@ -64,12 +63,12 @@ def predict():
     clf = joblib.load('prediction_classifier.pkl')
     pred = clf.predict(std_df)
     print(pred, pred[0], pred[0][0])
-    x = pred[0][0]
+    x = round(pred[0][0]*100, 2)
     
     print(x)
     
-    return jsonify({'prediction': str(x)})
-
+    return flask.render_template('index.html', predicted_value="Customer Churn rate: {}%".format(str(x)))
+    # return jsonify({'prediction': str(x)})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
