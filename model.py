@@ -135,8 +135,8 @@ def build_model(optimizer):
     classifier.compile(optimizer = optimizer, loss = 'binary_crossentropy', metrics = ['accuracy'])
     return classifier
 classifier = KerasClassifier(build_fn = build_model)
-parameters = {"batch_size": [5, 10, 18, 25, 32], 
-              "epochs": [30, 100, 500],
+parameters = {"batch_size": [5, 15, 30], 
+              "epochs": [30, 100],
               "optimizer": ["adam", "rmsprop"]}
 grid_search = GridSearchCV(estimator = classifier,
                            param_grid = parameters,
