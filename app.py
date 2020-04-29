@@ -38,11 +38,6 @@ def standardize_data(dta):
 
 
 @app.route('/')
-def hello_world():
-    return 'Hello World!'
-
-
-@app.route('/index')
 def index():
     return flask.render_template('index.html')
 
