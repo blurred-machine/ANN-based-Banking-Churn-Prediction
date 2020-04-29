@@ -6,33 +6,74 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+	<!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}"> -->
+    <!-- <link rel= "stylesheet" type= "text/css" href= "../static/styles/mainpage.css"> -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Banking Churn Prediction</title>
+    <style type="text/css">
+        .button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    </style>
 </head>
 <body style="background-color: #6A359C; text-align: center">
-    <div class="cl">
+    <div style="  text-align: center;">
       <h1 style="color: #FFF">Banking Churn Prediction</h1>
       <div class="container">
     <div class="row">
       <div class="col-sm-12">
   <form action="/predict" method="POST">
 
-    <div id="entries">
-        <input type="text" name="CreditScore" class="form-control" placeholder="Credit Score(eg: 632)">
-        <input type="text" name="Geography" class="form-control" placeholder="Geography (Germany, France, Spain)">
-        <input type="text" name="Gender" class="form-control" placeholder="Gender(Male, Female)">
-        <input type="text" name="Age" class="form-control" placeholder="Age(eg: 25)">
-        <input type="text" name="Tenure" class="form-control" placeholder="Tenure(Time since member)">
+    <div style="margin: 25px;">
+        <input type="text" name="CreditScore" class="form-control" style="margin: 3px" placeholder="Credit Score(eg: 632)">
+        <input type="text" name="Geography" class="form-control" style="margin: 3px" placeholder="Geography (Germany, France, Spain)">
+        <input type="text" name="Gender" class="form-control" style="margin: 3px" placeholder="Gender(Male, Female)">
+        <input type="text" name="Age" class="form-control" style="margin: 3px" placeholder="Age(eg: 25)">
+        <input type="text" name="Tenure" class="form-control" style="margin: 3px" placeholder="Tenure(Time since member)">
 
-        <input type="text" name="Balance" class="form-control" placeholder="Balance(eg: 500000)">
-        <input type="text" name="NumOfProducts" class="form-control" placeholder="Num Of Products(eg: 2)">
-        <input type="text" name="HasCrCard" class="form-control" placeholder="Has Credit Card('1'=Yes, '0'=No)">
-        <input type="text" name="IsActiveMember" class="form-control" placeholder="Is Active Member?('1'=Yes, '0'=No)">
-        <input type="text" name="EstimatedSalary" class="form-control" placeholder="Estimated Salary(eg: 25000)">
+        <input type="text" name="Balance" class="form-control" style="margin: 3px" placeholder="Balance(eg: 500000)">
+        <input type="text" name="NumOfProducts" class="form-control" style="margin: 3px" placeholder="Num Of Products(eg: 2)">
+        <input type="text" name="HasCrCard" class="form-control" style="margin: 3px" placeholder="Has Credit Card('1'=Yes, '0'=No)">
+        <input type="text" name="IsActiveMember" class="form-control" style="margin: 3px" placeholder="Is Active Member?('1'=Yes, '0'=No)">
+        <input type="text" name="EstimatedSalary" class="form-control" style="margin: 3px" placeholder="Estimated Salary(eg: 25000)">
     </div>
         <button class="button" type="submit" name="submitBtn"><span>Submit </span></button>
 

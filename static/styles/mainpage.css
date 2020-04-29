@@ -1,18 +1,4 @@
-
-.cl{
-  text-align: center;
-
-}
-.form-control{
-  margin-top: 1%;
-}
-
-#entries{
-	margin: 25px;
-}
-
-
-.button {
+/*.button {
   border-radius: 4px;
   background-color: #f4511e;
   border: none;
@@ -49,4 +35,4 @@
 .button:hover span:after {
   opacity: 1;
   right: 0;
-}
+}*/
