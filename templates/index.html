@@ -7,29 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+	<link rel= "stylesheet" type= "text/css" href= "../static/styles/mainpage.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Banking Churn Prediction</title>
 </head>
-<body><div class="bod">
+<body style="background-color: #6A359C; text-align: center">
     <div class="cl">
       <h1 style="color: #FFF">Banking Churn Prediction</h1>
+      <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
   <form action="/predict" method="POST">
 
     <div id="entries">
-        <input type="text" name="CreditScore" class="form-control" placeholder="CreditScore">
-        <input type="text" name="Geography" class="form-control" placeholder="Geography">
-        <input type="text" name="Gender" class="form-control" placeholder="Gender">
-        <input type="text" name="Age" class="form-control" placeholder="Age">
-        <input type="text" name="Tenure" class="form-control" placeholder="Tenure">
+        <input type="text" name="CreditScore" class="form-control" placeholder="Credit Score(eg: 632)">
+        <input type="text" name="Geography" class="form-control" placeholder="Geography (Germany, France, Spain)">
+        <input type="text" name="Gender" class="form-control" placeholder="Gender(Male, Female)">
+        <input type="text" name="Age" class="form-control" placeholder="Age(eg: 25)">
+        <input type="text" name="Tenure" class="form-control" placeholder="Tenure(Time since member)">
 
-        <input type="text" name="Balance" class="form-control" placeholder="Balance">
-        <input type="text" name="NumOfProducts" class="form-control" placeholder="NumOfProducts">
-        <input type="text" name="HasCrCard" class="form-control" placeholder="HasCrCard">
-        <input type="text" name="IsActiveMember" class="form-control" placeholder="IsActiveMember">
-        <input type="text" name="EstimatedSalary" class="form-control" placeholder="EstimatedSalary">
+        <input type="text" name="Balance" class="form-control" placeholder="Balance(eg: 500000)">
+        <input type="text" name="NumOfProducts" class="form-control" placeholder="Num Of Products(eg: 2)">
+        <input type="text" name="HasCrCard" class="form-control" placeholder="Has Credit Card('1'=Yes, '0'=No)">
+        <input type="text" name="IsActiveMember" class="form-control" placeholder="Is Active Member?('1'=Yes, '0'=No)">
+        <input type="text" name="EstimatedSalary" class="form-control" placeholder="Estimated Salary(eg: 25000)">
     </div>
         <button class="button" type="submit" name="submitBtn"><span>Submit </span></button>
 
@@ -39,10 +43,11 @@
 	<h3 style="color: white;">
 	{{predicted_value}}
 	</h3>
-
 </div>
 </div>
+</div>
 
+</div>
 
 
 </body>
