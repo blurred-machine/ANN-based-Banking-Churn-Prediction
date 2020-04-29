@@ -28,7 +28,7 @@
 -  The **API interfacing** for the deplyment on [Localhost](http://localhost:8080/index) is done using [Flask](https://flask.palletsprojects.com/en/1.1.x/).
 - The server is run on Local system during the staging of the project.
 - Older deployment was done on [Google Cloud Platform](https://cloud.google.com/)
-- Recently, 
+- Recently, the final deployment was done on **Heloku** platform and can be accessed from the link [https://banking-churn-pediction](https://banking-churn-pediction.herokuapp.com)
 
 ## Predictions
 - The final prediction of the model is the percentage of churn for that customer.
