@@ -5,8 +5,8 @@
 
 ## Project Description
 ### Welcome Screen
-- The main welcome screen is made in HTML5 and CSS3 with a basic and simple design.
-- Here is the main screen for the Bank Churn Prediction Interface for the bank admin.</br>
+- The main welcome screen is made in **HTML5** and **CSS3** with a basic and simple design.
+- Here is the main screen for the **Bank Churn Prediction** Interface for the bank admin.</br>
 
 ![Welcome Screen](https://github.com/paras009/ANN-based-Banking-Churn-Prediction/blob/master/images/3welcome_screen.PNG)
 
@@ -25,13 +25,13 @@
 ![Accuracy Python Console](https://github.com/paras009/ANN-based-Banking-Churn-Prediction/blob/master/images/1accuracy_console.PNG)
 
 ## Deployment and Production
--  The API interfacing for the deplyment on [Localhost](http://localhost:8080/index) is done using [Flask](https://flask.palletsprojects.com/en/1.1.x/).
+-  The **API interfacing** for the deplyment on [Localhost](http://localhost:8080/index) is done using [Flask](https://flask.palletsprojects.com/en/1.1.x/).
 - The server is run on Local system during the staging of the project.
 - Final deployment was done on [Google Cloud Platform](https://cloud.google.com/)
 
 ## Predictions
 - The final prediction of the model is the percentage of churn for that customer.
--  The prediction signifies the chances of the customer to leave the services of the bank which makes the bank to focus more on such such customers and try to retain them using **Sales and Marketing strategies** about which I have worked in this [GitHub](https://github.com/paras009/Sales-and-Marketing-Analytics) module.</br>
+-  The prediction signifies the chances of the customer to leave the services of the bank which makes the bank to _focus more on such such customers_ and try to retain them using **[Sales and Marketing strategies](https://github.com/paras009/Sales-and-Marketing-Analytics)** about which I have worked in this [GitHub](https://github.com/paras009/Sales-and-Marketing-Analytics) module.</br>
 
 ![Prediction Screenshot](https://github.com/paras009/ANN-based-Banking-Churn-Prediction/blob/master/images/5prediction.PNG)
 
