@@ -10,4 +10,4 @@ scikit-learn>=0.18
 matplotlib>=1.4.3
 pandas>=0.19
 keras
-tensorflow==1.15.2
+tensorflow==1.15.4
